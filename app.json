@@ -6,12 +6,10 @@
     "scheme": "coinsplit",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "plugins": [
