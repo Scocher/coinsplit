@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-export default function App() {
+export default function LedgerListScreen() {
   return (
     <SafeAreaView style={styles.screen}>
       <StatusBar style="dark" />

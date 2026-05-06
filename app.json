@@ -3,6 +3,7 @@
     "name": "Coinsplit",
     "slug": "coinsplit",
     "version": "1.0.0",
+    "scheme": "coinsplit",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -12,6 +13,9 @@
     "android": {
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
