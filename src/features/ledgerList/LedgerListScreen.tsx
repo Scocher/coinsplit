@@ -12,8 +12,7 @@ export default function LedgerListScreen() {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>No ledgers yet</Text>
           <Text style={styles.cardBody}>
-            Create a ledger to start tracking participants, expenses, and transfers for your next
-            shared event.
+            Create a ledger to start tracking participants, expenses, and transfers for your next shared event.
           </Text>
         </View>
       </ScrollView>
