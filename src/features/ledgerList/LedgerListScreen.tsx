@@ -1,11 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function LedgerListScreen() {
   return (
@@ -17,8 +11,8 @@ export default function LedgerListScreen() {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>No ledgers yet</Text>
           <Text style={styles.cardBody}>
-            Create a ledger to start tracking participants, expenses, and
-            transfers for your next shared event.
+            Create a ledger to start tracking participants, expenses, and transfers for your next
+            shared event.
           </Text>
         </View>
       </ScrollView>
