@@ -62,6 +62,23 @@ _Avoid_: Locked, closed forever
 > **Dev:** "If Anna paid for dinner for Anna, Ben, and Clara, is that one **Transfer** or one **Expense**?"
 > **Domain expert:** "That is one **Expense** in the **Ledger**. The app stores one **Expense allocation** per **Participant**, derives each **Balance**, and later suggests **Transfers** during **Settlement**."
 
+## Design system
+
+**Theme**: Centralised style tokens in `src/theme/index.ts`. All screens import from there — no page-level StyleSheet allowed. If a value appears in more than one file it belongs in the theme.
+
+**Color palette**: Black-to-white only (`#000000` → `#ffffff` with semantic gray stops). No strong color by design — the UI intentionally reads as a wireframe placeholder until a real visual design is applied.
+
+**Typography scale**: Three levels — `title` (28px/700), `body` (16px/400), `label` (12px/600, uppercase).
+
+**Buttons**: Two variants — `primary` (black background, white text) and `secondary` (white background, black border and text). Pure black/white enforces the wireframe constraint and avoids color debates.
+
+**Light/dark mode**: The `src/theme/` folder structure is intentional — exporting named token objects makes it straightforward to add a dark theme later without restructuring.
+
+## Localization
+
+**Locale resolution**: The active locale is determined in priority order: (1) user-selected language from the in-app picker, (2) device system language via `expo-localization`, (3) English hard fallback. Translation strings live in per-locale JSON files; adding a language requires no code changes.
+_Avoid_: Language detection, auto-detect only
+
 ## Flagged ambiguities
 
 - "user" was used to mean **Participant**; resolved: v1 has no account system, only ledger-local **Participants**.
