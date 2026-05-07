@@ -1,3 +1,12 @@
+export const spacing = {
+  xs: 8,
+  sm: 12,
+  md: 16,
+  lg: 20,
+  xl: 24,
+  xxl: 32,
+} as const;
+
 export const colors = {
   background: '#ffffff',
   surface: '#f5f5f5',
@@ -34,8 +43,8 @@ export const buttons = {
   primary: {
     container: {
       backgroundColor: '#000000',
-      paddingVertical: 16,
-      paddingHorizontal: 24,
+      paddingVertical: spacing.md,
+      paddingHorizontal: spacing.xl,
       borderRadius: 16,
       alignItems: 'center' as const,
     },
@@ -48,8 +57,8 @@ export const buttons = {
   secondary: {
     container: {
       backgroundColor: '#ffffff',
-      paddingVertical: 16,
-      paddingHorizontal: 24,
+      paddingVertical: spacing.md,
+      paddingHorizontal: spacing.xl,
       borderRadius: 16,
       alignItems: 'center' as const,
       borderWidth: 1,
