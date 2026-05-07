@@ -5,16 +5,23 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../components/Button';
 import Label from '../../components/Label';
 import Title from '../../components/Title';
-import { colors } from '../../theme';
+import { colors, spacing } from '../../theme';
 
 export default function SettlementViewScreen() {
   const { t } = useTranslation();
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 24, paddingVertical: 32, gap: 12 }}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingHorizontal: spacing.xl,
+          paddingVertical: spacing.xxl,
+          gap: spacing.sm,
+        }}
+      >
         <Label>{t('settlementView.label')}</Label>
-        <Title style={{ marginBottom: 8 }}>{t('settlementView.title')}</Title>
+        <Title style={{ marginBottom: spacing.xs }}>{t('settlementView.title')}</Title>
         <Button label={t('settlementView.backToLedger')} variant="secondary" onPress={() => router.back()} />
       </ScrollView>
     </SafeAreaView>

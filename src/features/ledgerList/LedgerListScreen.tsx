@@ -7,7 +7,7 @@ import BodyText from '../../components/BodyText';
 import Button from '../../components/Button';
 import Label from '../../components/Label';
 import Title from '../../components/Title';
-import { colors } from '../../theme';
+import { colors, spacing } from '../../theme';
 
 const PLACEHOLDER_LEDGER_ID = 'placeholder';
 
@@ -17,20 +17,27 @@ export default function LedgerListScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <StatusBar style="dark" />
-      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 24, paddingVertical: 32, gap: 16 }}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingHorizontal: spacing.xl,
+          paddingVertical: spacing.xxl,
+          gap: spacing.md,
+        }}
+      >
         <Label>{t('ledgerList.appName')}</Label>
         <Title>{t('ledgerList.title')}</Title>
 
         <View
           style={{
             borderRadius: 20,
-            padding: 20,
+            padding: spacing.lg,
             backgroundColor: colors.surface,
             borderWidth: 1,
             borderColor: colors.border,
           }}
         >
-          <BodyText style={{ fontWeight: '600', marginBottom: 8 }}>{t('ledgerList.empty.heading')}</BodyText>
+          <BodyText style={{ fontWeight: '600', marginBottom: spacing.xs }}>{t('ledgerList.empty.heading')}</BodyText>
           <BodyText style={{ color: colors.text.secondary, lineHeight: 24 }}>{t('ledgerList.empty.body')}</BodyText>
         </View>
 
@@ -41,8 +48,8 @@ export default function LedgerListScreen() {
             justifyContent: 'space-between',
             backgroundColor: colors.surface,
             borderRadius: 14,
-            paddingHorizontal: 20,
-            paddingVertical: 16,
+            paddingHorizontal: spacing.lg,
+            paddingVertical: spacing.md,
             borderWidth: 1,
             borderColor: colors.border,
           }}
@@ -52,7 +59,11 @@ export default function LedgerListScreen() {
           <BodyText style={{ fontSize: 22, color: colors.text.tertiary }}>›</BodyText>
         </TouchableOpacity>
 
-        <Button label={t('ledgerList.newLedger')} style={{ marginTop: 8 }} onPress={() => router.push('/ledger/new')} />
+        <Button
+          label={t('ledgerList.newLedger')}
+          style={{ marginTop: spacing.xs }}
+          onPress={() => router.push('/ledger/new')}
+        />
       </ScrollView>
     </SafeAreaView>
   );

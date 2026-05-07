@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../components/Button';
 import Label from '../../components/Label';
 import Title from '../../components/Title';
-import { colors } from '../../theme';
+import { colors, spacing } from '../../theme';
 
 export default function LedgerDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -13,9 +13,16 @@ export default function LedgerDetailScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 24, paddingVertical: 32, gap: 12 }}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingHorizontal: spacing.xl,
+          paddingVertical: spacing.xxl,
+          gap: spacing.sm,
+        }}
+      >
         <Label>{t('ledgerDetail.label')}</Label>
-        <Title style={{ marginBottom: 8 }}>Summer Trip</Title>
+        <Title style={{ marginBottom: spacing.xs }}>Summer Trip</Title>
 
         <Button label={t('ledgerDetail.newExpense')} onPress={() => router.push(`/ledger/${id}/expense/new`)} />
         <Button label={t('ledgerDetail.newTransfer')} onPress={() => router.push(`/ledger/${id}/transfer/new`)} />

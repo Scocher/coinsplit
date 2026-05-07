@@ -70,6 +70,9 @@ _Avoid_: Locked, closed forever
 
 **Typography scale**: Three levels — `title` (28px/700), `body` (16px/400), `label` (12px/600, uppercase).
 
+**Spacing scale**: Named stops exported from `src/theme/` — `xs` (8), `sm` (12), `md` (16), `lg` (20), `xl` (24), `xxl` (32). All padding, margin, and gap values must reference the scale. Border radius is a per-component decision and does not use the scale.
+_Avoid_: Raw numbers for spacing, a numeric multiplier function
+
 **Buttons**: Two variants — `primary` (black background, white text) and `secondary` (white background, black border and text). Pure black/white enforces the wireframe constraint and avoids color debates.
 
 **Light/dark mode**: The `src/theme/` folder structure is intentional — exporting named token objects makes it straightforward to add a dark theme later without restructuring.

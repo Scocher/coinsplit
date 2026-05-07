@@ -4,7 +4,7 @@ import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-import { colors } from '../../theme';
+import { colors, spacing } from '../../theme';
 
 export default function TransferFormScreen() {
   const { transferId } = useLocalSearchParams<{ id: string; transferId?: string }>();
@@ -21,8 +21,17 @@ export default function TransferFormScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 24, paddingVertical: 32, gap: 12 }}>
-        <Title style={{ marginBottom: 8 }}>{isEdit ? t('transferForm.titleEdit') : t('transferForm.titleNew')}</Title>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingHorizontal: spacing.xl,
+          paddingVertical: spacing.xxl,
+          gap: spacing.sm,
+        }}
+      >
+        <Title style={{ marginBottom: spacing.xs }}>
+          {isEdit ? t('transferForm.titleEdit') : t('transferForm.titleNew')}
+        </Title>
         <View style={{ flex: 1 }} />
         <Button label={t('common.save')} onPress={handleSave} />
         <Button label={t('common.cancel')} variant="secondary" onPress={handleCancel} />
