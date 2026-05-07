@@ -1,0 +1,39 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "ledgerList": {
+    "appName": "Coinsplit",
+    "title": "Ledgers",
+    "empty": {
+      "heading": "No ledgers yet",
+      "body": "Create a ledger to start tracking participants, expenses, and transfers for your next shared event."
+    },
+    "newLedger": "New Ledger"
+  },
+  "ledgerDetail": {
+    "label": "Ledger",
+    "newExpense": "New Expense",
+    "newTransfer": "New Transfer",
+    "settlement": "Settlement",
+    "editLedger": "Edit Ledger"
+  },
+  "ledgerForm": {
+    "titleNew": "New Ledger",
+    "titleEdit": "Edit Ledger"
+  },
+  "expenseForm": {
+    "titleNew": "New Expense",
+    "titleEdit": "Edit Expense"
+  },
+  "transferForm": {
+    "titleNew": "New Transfer",
+    "titleEdit": "Edit Transfer"
+  },
+  "settlementView": {
+    "label": "Ledger",
+    "title": "Settlement",
+    "backToLedger": "Back to Ledger"
+  }
+}
